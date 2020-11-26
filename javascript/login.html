@@ -1,0 +1,61 @@
+<!--Nama : Nabila ElMuthi'ah-->
+<!--Kelas : Sistem Informasi - 01 -->
+<!--NIM : 0110120172-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Authentication</title>
+    <style>
+        body{
+            background: linear-gradient(#ffe0e9,#ffc2d4,#fe5f55);
+            height: 97vh;
+        }
+        form{
+            position: center;
+            background: linear-gradient(#1dd3b0,#83c5be,#edf6f9);
+            border-style: rounder;
+            width: 300px;
+            margin: 0 auto;
+            padding: 30px;
+            text-align: right;
+            border-radius: 10px 10px;
+            box-shadow: 10px 13px 16px #293241;
+            font-size: 20px;
+            font-family: Arial, Helvetica, sans-serif;
+            color: #0d3b66 ;
+         }
+        .button{
+            margin: 20px;
+            padding: 10px;
+            width: 100px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            font-size: 20px;
+            color: #88d498;
+            background: #197278;
+        }
+        input [type=text]{
+            background-color: #f19c79;
+        }
+    </style>
+</head>
+<body>
+    <p style="color:  #bdc3c7 ;"></p>
+    <center>
+        <h1 class="login" style="color: #233d4d;">User Login</h1>
+        <form action="" name="form" onsubmit="return login()">
+            <br><br>
+            <label for="username" class="username">Username :</label>
+            <input id="username" type="text" name="username" placeholder="username" required><br><br>
+            <label for="password" class="password" >Password :</label>
+            <input id="password" type="password" name="password" placeholder="password" required>
+            <br><br>
+            <button class="button" type="submit" onclick=login()>Login</button><br><br>
+        </form>
+    </center>
+    <script src="./otentikasi.js"></script>
+</body>
+</html>

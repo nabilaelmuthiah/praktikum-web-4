@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurs Rupiah</title>
+    <style>
+        body{
+            height: 97vh;
+            text-align: center;
+            background: linear-gradient(#fec3a6,#fec3a6,#efe9ae); 
+            font-size: 20px; 
+        }
+        h1, h5{
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            color: #2c3e50;
+        }
+        p {
+            color: #0c2461;
+            font-family: initial;
+        }
+        table{
+            border: 3;
+            color: #9e2a2b;
+        }
+        input{
+            color: #641220;
+        }
+    </style>
+
+</head>
+<body>
+    <fieldset align="center">
+        <legend>Kurs Rupiah - Mata Uang Asing</legend>
+        <table align="center">
+            <tr>
+                <td><h4>Nilai Mata Uang </h4></td>
+                <td><h4>Valas</h4></td>
+                <td><h4>Hasil</h4></td>
+            </tr>
+            <tr>
+                <td><input type="number" id="input" > </td>
+                <td><select name="" id="kurs" onchange="kurs(this.value)">
+                    <option value=""> Mata Uang</option>        
+                    <option value="eur">Euro - Europa</option>
+                            <option value="Yen">Yen - Jepan</option>
+                            <option value="riyal">Riyal - Arab Saudi</option>
+                            <option value="dollar">Dollar - US</option>
+                            <option value="ringgit">Ringgit - Malaysia</option>
+                            <option value="sgd">Dollar - Singapore</option>
+                                   
+                    </select></td>
+                <td> <input type="text" name="" id="hasil"> </td>
+            </tr>
+        </table>
+        <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    </fieldset>
+    <script>
+           function kurs(set) {
+    nilai = document.getElementById("input").value 
+    if ( set == "eur"){
+        var hasil = nilai * 15.888
+    } else if(set == "Yen") {
+        var hasil = nilai * 120
+    } else if(set == "riyal") {
+        var hasil = nilai * 3.592
+    } else if(set == "dollar") {
+        var hasil = nilai * 9.915
+    } else if(set == "ringgit") {
+        var hasil = nilai * 874
+    } else if(set == "sgd") {
+        var hasil = nilai * 13.472
+    }
+
+    document.getElementById("hasil").value = hasil 
+}
+
+    
+    </script>
+
+</body>
+</html>

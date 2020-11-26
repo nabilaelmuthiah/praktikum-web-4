@@ -1,0 +1,60 @@
+<!--Nama : Nabila ElMuthi'ah-->
+<!--Kelas : Sistem Informasi - 01 -->
+<!--NIM : 0110120172-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker</title>
+    <style>
+        body{
+            background: linear-gradient(#718093,#7f8fa6,#dcdde1);
+            align-content: center;
+            text-align: center;
+            color: #273c75 ;
+            font-weight: bold;
+        }
+        #gambar{
+            position: relative;
+            align-content: center;
+            width: max(50vw, 400px);
+            border: 6px solid#f5f6fa;
+
+        }
+        #form1{
+            background-color: #f5f6fa;
+            font-size: 28px;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+        .city{
+            width: 80px;
+            margin: 0 auto;
+        }
+    </style>
+    <script>
+        function choose(){
+            let list_city = document.getElementById("city");
+            let idx = list_city.selectedIndex;
+            console.log("kota index ke-" + idx  + " adalah " + list_city[idx].value);
+            let area_pict = document.getElementById("gambar");
+            area_pict.src="../javascript/image/" + list_city[idx].value +".jpeg"
+        }
+
+    </script>
+</head>
+<body>
+        <form id="form1">
+                        Choose a City : <select name="city" id="city" onchange="choose()">
+                        <option value="istanbul" >Istanbul</option>
+                        <option value="melbourne">Melbourne</option>
+                        <option value="jakarta">Jakarta</option>
+                        <option value="dubai">Dubai</option>
+                        <option value="seoul">Seoul</option>
+                        <option value="bangkok">Bangkok</option>
+                        <option value="tokyo">Tokyo</option></select>
+        </form>
+    <br>
+    <img src="../javascript/image/istanbul.jpeg" alt="istanbul" id="gambar">
+</body>
+</html>

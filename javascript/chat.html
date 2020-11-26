@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplication Chat</title>
+    <style>
+      body{
+        display: flex;
+        height: 97vh;
+        justify-content: flex-end;
+        align-items: flex-end;
+        background: linear-gradient(#bbd1ea,#a1c6ea,#507dbc);
+      }
+
+      #chatbox{
+        border: 5px solid #1d3461;
+        position: relative;
+        width: 400px;
+        height: 450px;
+        background: linear-gradient(#f6c0d0, #d0a5c0, #8e7c93);
+      }
+      #chatbox input,
+      #chatbox button{
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        padding: 15;
+        border: 1px;
+        color: #3d5a80;
+      }
+      #chatbox ul{
+        list-style: none;
+        padding: 20px;
+      }
+      #chatbox button{
+        background-color: #cbc0d3;
+        width: 15%;
+        height: 8%;
+        right: 0;
+      }
+      #chatbox input{
+        left: 0;
+        padding: 10px;
+        width: 80%;
+      }
+      h2{
+        color: #901b22;
+        font-family: initial;
+      }
+    </style>
+</head>
+<body>
+    <div id="chatbox"> 
+      <h2 align="center">Messages</h2><hr>
+      <ul>
+      </ul>
+      <input id="textarea" name="chat"  placeholder="Type message here...">
+      <button type="submit" class="send" > SEND </button>
+    </div>
+      
+
+    <script type="text/javascript">
+      const ini_ul = document.querySelector("ul")
+      const ini_input = document.querySelector("input")
+      const ini_button = document.querySelector("button")
+      const buat_li = document.createElement("li")
+
+      ini_button.addEventListener('click', function(){
+        const buat_li = document.createElement("li");
+        const input = document.createTextNode(ini_input.value);
+        buat_li.appendChild(input);
+        ini_ul.appendChild(buat_li);
+        ini_input.value= ' ';
+
+      });
+
+    </script>
+  
+</body>
+</html>

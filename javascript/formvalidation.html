@@ -1,0 +1,119 @@
+<!--Nama : Nabila ElMuthi'ah-->
+<!--Kelas : Sistem Informasi - 01 -->
+<!--NIM : 0110120172-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Validation</title>
+  <style>
+      body{
+          background:linear-gradient(#7bf1a8,#c1fba4,#ffef9f) ;
+      }
+    form{
+        position: center;
+        background: linear-gradient(#b7e4c7,#74c69d,#52b788);
+        border-style: rounder;
+        width: 400px;
+        margin: 0px auto;
+        padding: 50px;
+        text-align: left;
+        border-radius: 10px 10px;
+        box-shadow: 10px 13px 16px #293241;
+        font-size: 20px;
+        font-family: Arial, Helvetica, sans-serif;
+        color: #0d3b66 ;
+        height: 50vh;
+        overflow: hidden;      
+        }
+    label {
+        float: left;
+        width: 200px;
+        padding-right: 24px;
+        }
+    input {
+        float: left;
+        width: calc(100% - 200px);
+    }
+    button{
+        margin: 10px;
+        padding: 5px;
+        width: auto;
+        border: 5px;
+        float: right;
+        cursor: pointer;
+        font-size: 20px;
+        color: #faf9f9;
+        background: #1a936f;
+        width: calc(100% - 250px);
+    }
+    h1, h2, {
+        color: 
+    }
+    
+    h3{
+        font: font-family: Arial, "Helvetica Neue", Helvetica, sans-serif; 
+    }
+  </style>
+</head>
+<body >
+
+  <h1 align="center">VALIDATION FORM</h1>
+
+  <form action="">
+    <label for="" >NAME &nbsp; :</label>
+    <input type="text" id="name" required><br>
+    <label for="">EMAIL &nbsp; :</label>
+    <input type="email" id="email" required><br>
+    <label for="">TIME &nbsp;  &emsp13;  :</label>
+    <input type="time" id="time" min="00.00" max="23.59" required><br>
+    <label for="">DESTINATION :</label>
+    <input type="text" id="destination" required><br>
+    <label for="">TICKET &nbsp;:</label>
+    <input type="number" id="ticket" required><br><br><br>
+    <button type="button" onclick="validasi()">SUBMIT</button>
+  </form>
+<br><br>
+  <h2 align="center">VALIDATION</h2>
+<br>
+<form action="">
+    <h3 id="customer"></h3>
+    <h3 id="emailcustomer"></h3>
+    <h3 id="timebooking"></h3>
+    <h3 id="destinationbook"></h3>
+    <h3 id="totalticket"></h3> 
+</form>
+<script>
+  function validasi(){
+    let nama = document.getElementById('name').value;
+    let email = document.getElementById('email').value;
+    let waktu = document.getElementById('time').value;
+    let destinasi = document.getElementById('destination').value;
+    let tiket = document.getElementById('ticket').value;
+
+    if (nama == "" || nama.leght >30) {
+      alert("Enter your name.");
+    }else if (email == "") {
+      alert("Enter your email.");
+    }else if (waktu == "") {
+      alert("Enter time booking");
+    }else if (destinasi == "") {
+      alert("Enter your destination.");
+    }else if (tiket == "") {
+      alert("Enter ticket booking.");
+    }
+    else{
+      document.getElementById('customer').innerHTML = 'Name :  '+ nama + '<br>'
+      document.getElementById('emailcustomer').innerHTML = 'Email :  ' +email+'<br>'
+      document.getElementById('timebooking').innerHTML = 'Departure Time :  ' +waktu+'<br>'
+      document.getElementById('destinationbook').innerHTML = 'Destination :  ' +destinasi+'<br>'
+      document.getElementById('totalticket').innerHTML = 'Ticket booked :  ' +tiket+ '<br>'
+    }
+    
+  }
+
+</script>
+
+</body>
+</html>
